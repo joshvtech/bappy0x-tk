@@ -1,0 +1,363 @@
+{% extends "base.html" %}
+
+{% block title %}My Specialties{% endblock %}
+
+{% block content %}
+<h2 class="display-2 text-center" id="my-specialties">My Specialties</h2>
+
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#front-end-languages">Front End Languages</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#back-end-languages">Back End Languages</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#software-languages">Software Languages</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#testing-services">Testing/CI+CD Services</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#deployment-services">Deployment Services</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#data-stores">Data Stores</a>
+    </li>
+</ul>
+
+<div class="tab-content">
+    <!--Front End Languages-->
+    <div class="tab-pane fade show active" id="front-end-languages">
+        <div class="container-fluid padding">
+            <div class="row text-center">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h4 class="display-4">Front End Languages</h4>
+                    <p>These languages are the pure fundamentals of any website and they comprise the front-end of any web application.</p>
+                </div>
+                <!--HTML-->
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                    <div class="card mt-3">
+                        <img src="/static/img/icons/html5.png" class="w-25 mt-3">
+                        <div class="card-body">
+                            <h5 class="card-title"><abbr title="HyperText Markup Language 5">HTML5</abbr></h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Plain user interface.</h6>
+                            <p class="card-text">HTML is the forefront of the front-end. It communicates with the browser, telling it what to display. It may also link to other sites for assets like Style Sheets and Scripts. HTML uses tags (known as elements) and DOM, which is very simplistic.<br>I am very advanced in this language and it is the first front-end language that I ever learnt.</p>
+                            <a class="btn btn-danger disabled" href="#" target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Watch my YouTube introduction to HTML."><i class="fa fa-youtube-play"></i> My YouTube Video</a>
+                            <a class="btn btn-secondary" href="https://www.w3schools.com/html/default.asp" target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Click here to learn some basic HTML5 skills.">Find out more!</a>
+                        </div>
+                    </div>
+                </div>
+                <!--CSS-->
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                    <div class="card mt-3">
+                        <img src="/static/img/icons/css3.png" class="w-25 mt-3">
+                        <div class="card-body">
+                            <h5 class="card-title"><abbr title="Cascading Style Sheets 3">CSS3</abbr></h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Styling for plain documents.</h6>
+                            <p class="card-text">A CSS file is used in order to describe the presentation of a HTML document. This allows for complete control over how the website looks to the end user.<br>Along with HTML, I am very experienced in CSS and it was one of the first front-end languages that I learnt.</p>
+                            <a class="btn btn-secondary" href="https://www.w3schools.com/css/default.asp" target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Click here to learn some basic CSS3 skills.">Find out more!</a>
+                            <div class="card mt-3">
+                                <img src="/static/img/icons/bootstrap.png" class="w-25 mt-3">
+                                <div class="card-body mt-2">
+                                    <h5 class="card-title">Bootstrap</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">User Interface Framework</h6>
+                                    <p class="card-text">Bootstrap uses more advanced CSS tricks in order to allow for appropriate scaling across all devices. It also has different presets and templates to allow for an easier and quicker experience for a developer. This site actually uses Bootstrap!<br>I have very vast experience with Bootstrap and I'm very fluent and confident in it.</p>
+                                    <a class="btn btn-secondary" href="https://www.w3schools.com/bootstrap4/default.asp" target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Click here to learn some basic Bootstrap skills.">Find out more!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--JavaScript-->
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="card mt-3">
+                        <img src="/static/img/icons/javascript.png" class="w-25 mt-3">
+                        <div class="card-body">
+                            <h5 class="card-title">JavaScript</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Front-end code execution.</h6>
+                            <p class="card-text">JavaScript is used for User Experience and controls the HTML document. It controls how elements act and respond to different types of input.<br>JavaScript is one of my favourite languages to use. It may not be high level but it is extremely flexible and can be used in many different ways.</p>
+                            <a class="btn btn-secondary" href="https://www.w3schools.com/js/default.asp" target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Click here to learn some basic JavaScript.">Find out more!</a>
+                            <!--<div class="card mt-3">
+                                <img src="/static/img/icons/react.png" class="w-25 mt-3">
+                                <div class="card-body mt-2">
+                                    <h5 class="card-title">React</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">User Interface Framework</h6>
+                                    <p class="card-text">React is used to build user interactiveness of a website.<br>React is my go-to for building interactive objects on websites, click the button below to try it out!</p>
+                                    <button type="button" class="btn btn-warning disabled">React Example</button>
+                                    <a class="btn btn-secondary" href="https://reactjs.org/" target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Click here to visit React.">Find out more!</a>
+                                </div>
+                            </div>
+                            <div class="card mt-3">
+                                <img src="/static/img/icons/angular.png" class="w-25 mt-3">
+                                <div class="card-body mt-2">
+                                    <h5 class="card-title">Angular</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">User Interface Framework</h6>
+                                    <p class="card-text">Test here please</p>
+                                    <a class="btn btn-secondary" href="https://angular.io/" target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Click here to visit Angular.">Find out more!</a>
+                                </div>
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Back End Languages-->
+    <div class="tab-pane fade" id="back-end-languages">
+        <div class="container-fluid padding">
+            <div class="row text-center padding">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h4 class="display-4">Back End Languages</h4>
+                    <p>Back-end languages are the backbone of a web application, they will handle the processing and handling of web requests.</p>
+                </div>
+                <!--Python (Flask/Django)-->
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="card mt-3">
+                        <img src="/static/img/icons/python.png" class="w-25 mt-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Python (Flask/Django)</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Server-side code execution.</h6>
+                            <p class="card-text">In order to create a dynamic web application using Python, you can use the Flask or Django packages. This site uses Flask, and it is my favourite for creating the back-end for web applications.<br>Python is my favourite language ever. It's extremely powerful and can do anything you'd like to throw at it. It can be used to create games, create discord bots, read your voice and even recognise your face!</p>
+                            <a class="btn btn-secondary" href="https://www.python.org/" target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Click here to learn more about Python.">Find out more!</a>
+                            <div class="card mt-3">
+                                <img src="/static/img/icons/gunicorn.png" class="w-25 mt-3">
+                                <div class="card-body mt-2">
+                                    <h5 class="card-title">Gunicorn</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">Subtitle</h6>
+                                    <p class="card-text">Gunicorn is a <abbr title="Web Server Gateway Interface">WSGI</abbr> <abbr title="HyperText Transfer Protocol">HTTP</abbr> Server</p>
+                                    <a class="btn btn-secondary" href="https://reactjs.org/" target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Click here to visit React.">Find out more!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--JavaScript (Node.js & Express)-->
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="card mt-3">
+                        <img src="/static/img/icons/nodejs.png" class="w-25 mt-3">
+                        <div class="card-body">
+                            <h5 class="card-title">JavaScript (Node.js & Express)</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Hypertext Markup Language</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card'scontent.</p>
+                            <a class="btn btn-secondary" href="https://nodejs.org/en/" target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Click here to learn more about Node.js.">Find out more!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Software Languages-->
+    <div class="tab-pane fade" id="software-languages">
+        <div class="container-fluid padding">
+            <div class="row text-center padding">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h4 class="display-4">Software Languages</h4>
+                    <p>These languages are used to create applications for a user to interact with.</p>
+                </div>
+                <!--Python-->
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                    <div class="card mt-3">
+                        <img src="/static/img/icons/python.png" class="w-25 mt-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Python (Tkinter)</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Hypertext Markup Language</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card'scontent.</p>
+                            <a class="btn btn-secondary" href="https://docs.python.org/3/library/tkinter.html" target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Click here to learn more about Tkinter.">Find out more!</a>
+                        </div>
+                    </div>
+                </div>
+                <!--C#-->
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                    <div class="card mt-3">
+                        <img src="/static/img/icons/csharp.png" class="w-25 mt-3">
+                        <div class="card-body">
+                            <h5 class="card-title"><abbr title="C Sharp">C#</abbr></h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Build .NET applications.</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card'scontent.</p>
+                            <a class="btn btn-secondary" href="https://docs.microsoft.com/en-us/dotnet/csharp/" target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Click here to learn some C#.">Find out more!</a>
+                        </div>
+                    </div>
+                </div>
+                <!--C++-->
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="card mt-3">
+                        <img src="/static/img/icons/cpp.png" class="w-25 mt-3">
+                        <div class="card-body">
+                            <h5 class="card-title"><abbr title="C Plus Plus">C++</abbr></h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Build Windows applications.</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card'scontent.</p>
+                            <a class="btn btn-secondary" href="https://www.cplusplus.com/" target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Click here to learn more about C++.">Find out more!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Testing Services-->
+    <div class="tab-pane fade" id="testing-services">
+        <div class="container-fluid padding">
+            <div class="row text-center padding">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h4 class="display-4">Testing/CI+CD Services</h4>
+                    <p>When preparing for deployment of an application, it's important to check if it's functional. These applications help to do just that.</p>
+                </div>
+                <!--Trello-->
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                    <div class="card mt-3">
+                        <img src="/static/img/icons/trello.png" class="w-25 mt-3">
+                        <div class="card-body mt-2">
+                            <h5 class="card-title">Trello</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Project planning.</h6>
+                            <p class="card-text">Trello is an intuitive planner for projects, companies and lots more. It's comprised of teams/organisations, boards, lists and cards. All of which are very customisable.<br>I use Trello in order to track bugs, issues, ideas and tasks for each of my projects.</p>
+                            <a class="btn btn-secondary" href="https://trello.com/" target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Click here to visit Trello.">Find out more!</a>
+                        </div>
+                    </div>
+                </div>
+                <!--TravisCI-->
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                    <div class="card mt-3">
+                        <img src="/static/img/icons/travisci.png" class="w-25 mt-3">
+                        <div class="card-body mt-2">
+                            <h5 class="card-title">TravisCI</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">External testing.</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card'scontent.</p>
+                            <a class="btn btn-secondary" href="https://travis-ci.org/" target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Click here to visit TravisCI.">Find out more!</a>
+                        </div>
+                    </div>
+                </div>
+                <!--CircleCI-->
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                    <div class="card mt-3">
+                        <img src="/static/img/icons/circleci.png" class="w-25 mt-3">
+                        <div class="card-body mt-2">
+                            <h5 class="card-title">CircleCI</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Website responsiveness</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card'scontent.</p>
+                            <a class="btn btn-secondary" href="https://circleci.com/" target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Click here to visit CircleCI.">Find out more!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Deployment Services--------------------------------------------------------------------------------------->
+    <div class="tab-pane fade" id="deployment-services">
+        <div class="container-fluid padding">
+            <div class="row text-center padding">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h4 class="display-4">Deployment Services</h4>
+                    <p>When launching applications to the web, I primarily use these services.</p>
+                </div>
+                <!--GitHub-->
+                <div class="col-xs-12 col-sm-6 col-md-12 col-lg-3">
+                    <div class="card mt-3">
+                        <img src="/static/img/icons/github.png" class="w-25 mt-3">
+                        <div class="card-body mt-2">
+                            <h5 class="card-title">GitHub</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Website responsiveness</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card'scontent.</p>
+                            <a class="btn btn-secondary" href="https://github.com/" target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Click here to visit GitHub.">Find out more!</a>
+                        </div>
+                    </div>
+                </div>
+                <!--Heroku-->
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card mt-3">
+                        <img src="/static/img/icons/heroku.png" class="w-25 mt-3">
+                        <div class="card-body mt-2">
+                            <h5 class="card-title">Heroku</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Website responsiveness</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card'scontent.</p>
+                            <a class="btn btn-secondary" href="https://www.heroku.com/" target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Click here to visit Heroku.">Find out more!</a>
+                        </div>
+                    </div>
+                </div>
+                <!--Docker-->
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card mt-3">
+                        <img src="/static/img/icons/docker.png" class="w-25 mt-3">
+                        <div class="card-body mt-2">
+                            <h5 class="card-title">Docker</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Website responsiveness</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card'scontent.</p>
+                            <a class="btn btn-secondary" href="https://www.docker.com/" target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Click here to visit Docker.">Find out more!</a>
+                        </div>
+                    </div>
+                </div>
+                <!--Glitch-->
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card mt-3">
+                        <img src="/static/img/icons/glitch.png" class="w-25 mt-3">
+                        <div class="card-body mt-2">
+                            <h5 class="card-title">Glitch</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Website responsiveness</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card'scontent.</p>
+                            <a class="btn btn-secondary" href="https://glitch.com/" target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Click here to visit Glitch.">Find out more!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Data Stores-->
+    <div class="tab-pane fade" id="data-stores">
+        <div class="container-fluid padding">
+            <div class="row text-center padding">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h4 class="display-4">Data Stores</h4>
+                    <p>When data is required for an application, a data store must be used. Here is what I use.</p>
+                </div>
+                <!--PostgreSQL-->
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card mt-3">
+                        <img src="/static/img/icons/postgresql.png" class="w-25 mt-3">
+                        <div class="card-body mt-2">
+                            <h5 class="card-title">PostgreSQL</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Website responsiveness</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card'scontent.</p>
+                            <a class="btn btn-secondary" href="https://www.postgresql.org/" target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Click here to visit PostgreSQL.">Find out more!</a>
+                        </div>
+                    </div>
+                </div>
+                <!--Redis-->
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card mt-3">
+                        <img src="/static/img/icons/redis.png" class="w-25 mt-3">
+                        <div class="card-body mt-2">
+                            <h5 class="card-title">Redis</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Website responsiveness</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card'scontent.</p>
+                            <a class="btn btn-secondary" href="https://redis.io/" target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Click here to visit Redis.">Find out more!</a>
+                        </div>
+                    </div>
+                </div>
+                <!--SQLite-->
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card mt-3">
+                        <img src="/static/img/icons/sqlite.png" class="w-25 mt-3">
+                        <div class="card-body mt-2">
+                            <h5 class="card-title">SQLite</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Website responsiveness</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card'scontent.</p>
+                            <a class="btn btn-secondary" href="https://www.sqlite.org/fileformat2.html" target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Click here to visit SQLite.">Find out more!</a>
+                        </div>
+                    </div>
+                </div>
+                <!--MongoDB-->
+                <div class="col-xs-12 col-sm-6 col-md-12 col-lg-3">
+                    <div class="card mt-3">
+                        <img src="/static/img/icons/mongodb.png" class="w-25 mt-3">
+                        <div class="card-body mt-2">
+                            <h5 class="card-title">MongoDB</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Website responsiveness</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card'scontent.</p>
+                            <a class="btn btn-secondary" href="https://www.mongodb.com/" target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Click here to visit MongoDB.">Find out more!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

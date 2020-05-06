@@ -1,0 +1,43 @@
+.carousel-inner {
+    max-height: 100vh;
+}
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.carousel-caption i {
+    font-size: 6rem;
+}
+.carousel-caption a {
+    color: inherit;
+}
+.carousel-caption a:hover {
+    color: #eeeeee
+}
+.content {
+    width: 90vw;
+    margin: auto;
+}
+.card img {
+    align-self: center;
+}
+
+.footer {
+    /*background-color: #f2f2f2;*/
+    border-top: 4px solid #f2f2f2;
+}
+.footer a {
+    font-size: 2rem;
+}
+.footer-social {
+    list-style: none;
+    padding-left: 0;
+}
+.footer-social li {
+    float: left;
+    padding: 0 10px;
+}
+.footer-social li:first-child {
+    padding-left: 0;
+}

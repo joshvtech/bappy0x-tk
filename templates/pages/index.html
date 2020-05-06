@@ -1,0 +1,140 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row text-center">
+        <div class="col-md-4 text-right">
+            <h2 class="display-2">About Me</h2>
+        </div>
+        <div class="col-md-8 text-left">
+            <p>
+                Hello! Welcome to my site, this is what I like to call my `Diary of Software and Web Development`. Here you can find various things, including what languages I 
+                specialise in, where you can learn more about them, and you can even watch some of my content on some of these languages!<br>If you would like to know about me... Well, 
+                I'm a British 16 year old student. I study A-Level Computer Science, BTEC Public Service, A-Level Mathematics and more. My main interests revolve around firefighting 
+                and this is the industry I'd love to work in - primarily as a firefighter. I'm working towards this goal as I progress through my Cadet firefighting course as well as 
+                my Public Service course. However, I also have a vast amount of knowledge in Software and Web Development, and I'd like to keep it as a hobby for as long as possible.
+                <br>When it comes to programming and coding, I typically like to help people and experiment with my own projects at both high and low levels. Web Development is my 
+                largest strength and I love to build different web applications, whether that be a joke generator or an advanced, fully-fledged site that uses encrypted user logins and 
+                more.
+            </p>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-4 text-right">
+            <h2 class="display-4">What Do You Do?</h2>
+        </div>
+        <div class="col-md-8 text-left">
+            <p>
+                I create tutorials for beginners, however these tutorials are designed so that anybody from any skillset or background can follow them. I decided to make these 
+                tutorials because so many people ask me, daily, `How do I code?`, `Where should I start?`, `How do I start?`. Complaints against currently existing tutorials are also 
+                common, as people find them boring, counterintuitive and otherwise hard to follow. My tutorials aim to help new people, rather than confuse them.<br>As well as this, 
+                I use the service <a href="https://www.fiverr.com/" target="_blank">Fiverr</a> in order to offer some not-so-free services, but I aim to make these as cheap and as 
+                reasonable as possible, and stretch for the buyer to learn the language that I write for them, and encourage them to watch some of my easy-to-follow tutorials.
+                <br> I also have a keen interest in music and I'm quite an audiophile. I play guitar and write lyrics and tracks when I have nothing better to do. Along with this, I 
+                also greatly appreciate photography. I studied GCSE Photography and I'm obsessed with framing and creating the right picture for what it's meant for. I've captured 
+                airshows, different landscapes, different portraits and of course; I've photographed my counties Fire Service.<br>Naturally, along with my Computer Science studies and 
+                my general interest in computing, I love computer hardware. I constantly look for the best deals on different components and keep my eye on new products within the tech 
+                industry.<br>As I mentioned above, I also like to `play around` and create my own applications purely for fun. This allows for me to learn, therefore enabling me to 
+                educate and tell other people about my findings. I've created successful Discord bots, successful Roblox games, multiple web apps (including RESTful API's) and much, 
+                much more.
+            </p>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-4 text-right">
+            <h2 class="display-4">How Do You Do It?</h2>
+        </div>
+        <div class="col-md-8 text-left">
+            <p>
+                All of the services that I offer, regardless if they're free to code or not, come at a cost. There are many services that must be used in order to launch an application 
+                and therefore a cost of some form is inflicted. I don't currently work and because of my dedication to my studies, I am unable to. So, the cost of the services that I 
+                use, like <a href="https://www.digitalocean.com" target="_blank"><abbr title="Used for VPS hosting">DigitalOcean</abbr></a> and 
+                <a href="https://www.namecheap.com" target="_blank"><abbr title="Used for domain registration">Namecheap</abbr></a> as well as many more, must be covered.
+            </p>
+            <p class="lead">
+                Support me on <i class="fab fa-patreon" title="Patreon"></i> by clicking <a href="{{ url_for('links.patreon') }}" targed="_blank">Here</a>!<br>
+            </p>
+            <p>
+                Thank you for your support!
+            </p>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-4 text-right">
+            <h2 class="display-4">What Are Your Goals?</h2>
+        </div>
+        <div class="col-md-8 text-left">
+            <p>
+                I have multiple goals, not only in the field of coding. However, atleast half of my life aspirations lay within coding. Firstly, I'd like to reach a wide audience. This 
+                will allow me to help more people, also adding more people into the industry. I use LBRY as my main platform for uploading my content. This platform rewards viewers for 
+                watching content with LBC (a cryptocurrency) and this is used in order to promote content. Therefore, I need LBC in order to succeed on this platform, and viewing is 
+                completely free to you.
+            </p>
+            <p class="lead">
+                Watch and tip me on <i class="fas fa-film" title="LBRY"></i> by clicking <a href="{{ url_for('links.lbry') }}" target="_blank">Here</a>.<br>
+            </p>
+            <p>
+                Outside of coding/computing; I aim to finish my A-Level and Fire Cadet courses. Once I've completed these, I then aim to join the Fire Service to serve the public and 
+                the entire country - for as long as I possibly can. I'd like to continue coding and when I get the time, then that'll be what I'm most likely doing.
+            </p>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-4 text-right">
+            <h2 class="display-4">Where Should I Start Coding?</h2>
+        </div>
+        <div class="col-md-8 text-left">
+            <p class="lead">
+                Watch my video on this topic on <i class="fas fa-film" title="LBRY"></i> by clicking <a href="{{ url_for('links.start_coding') }}" target="_blank">Here</a>.<br>
+            </p>
+            <p>
+                There are many different routes and pathways to coding, and there are so many different ways to start too. Here are a small list of some of the ways you can start, 
+                ordered from easiest, to hardest:
+            </p>
+            <ul>
+                <li>
+                    <a href="https://register.ubisoft.com/rabbids-coding/en-GB" target="_blank">Rabbids Coding</a>
+                    <p>
+                        Rabbids Coding is all about learning through play. You can place blocks of code down, in order to instruct `Rabbids` on where to go, what to do. This will 
+                        introduce you to some basic fundamentals within coding. Including loops, conditions and optimisation.
+                    </p>
+                </li>
+                <li>
+                    <a href="https://scratch.mit.edu/" target="_blank">Scratch</a>
+                    <p>
+                        Scratch is a lot like Rabbids Coding, however it will introduce you to a lot more, and in a slightly more advanced way. Scratch uses `drag and drop` blocks of 
+                        code. It can in order to create mini-games and mini applications Scratch can also run in the browser, so no downloads are needed at all. For those who already 
+                        know languages like JavaScript, custom code blocks can be made - there are some interesting videos online demonstrating this.
+                    </p>
+                </li>
+                <li>
+                    <a href="https://www.roblox.com/" target="_blank">Roblox</a>
+                    <p>
+                        Roblox is a great starting place for anybody that is interested in multiplayer interaction. Roblox is not as a simple as Rabbids Coding, nor Scratch. However, 
+                        its unique take on LUA helps for a simple and intuitive start. Roblox is also very well documented, allowing you to search up any issues that you may be having.
+                        Roblox's games are all built by their players, this allows anybody to play and create their own custom worlds and there are very many different genres of games 
+                        to play. It's certainly a great starting point - but I recommend having atleast a little bit of prior knowledge if you choose to code on it.
+                    </p>
+                </li>
+                <li>
+                    <a href="https://www.python.org/" target="_blank">Python</a>
+                    <p>
+                        Python is also one of the greatest places to start. It introduces proper programming syntax and other fundamental/core structures for nearly every language that 
+                        exists. It also allows its users to use packages that other users built. This allows for an absolutely gigantic amount of functionality, allowing users to do 
+                        do (quite literally) whatever they'd like to do. This could be; build a game, create a 3d engine, analyse and scan images and infinitely more.
+                    </p>
+                    <p class="lead">
+                        Watch my Python beginners tutorial on <i class="fas fa-film" title="LBRY"></i> by clicking <a href="{{ url_for('links.python_beginners') }}" target="_blank">Here</a>.<br>
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
