@@ -15,6 +15,15 @@
 .carousel-caption a:hover {
     color: #eeeeee
 }
+
+.navbar-brand, .footer-brand {
+    color: #da3232 !important;
+    font-size: 2rem !important;
+}
+.footer-brand:hover {
+    text-decoration: none;
+}
+
 .content {
     width: 90vw;
     margin: auto;
@@ -27,10 +36,8 @@
     /*background-color: #f2f2f2;*/
     border-top: 4px solid #f2f2f2;
 }
-.footer a {
-    font-size: 2rem;
-}
 .footer-social {
+    font-size: 2rem;
     list-style: none;
     padding-left: 0;
 }
@@ -40,4 +47,7 @@
 }
 .footer-social li:first-child {
     padding-left: 0;
+}
+.footer-social i {
+    color: #da3232 !important;
 }

@@ -4,7 +4,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>{% block title %}{% endblock %} • Joshua Vaughan</title>
+    <title>{% block title %}{% endblock %} • Bappy0X</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
@@ -31,7 +31,7 @@
             <div class="carousel-item active">
                 <img src="{{ url_for('static', filename='img/image1.jpg') }}" class="d-block w-100 mx-auto">
                 <div class="carousel-caption d-none d-md-block">
-                    <h1 class="display-1"></i>Joshua Vaughan</h1>
+                    <h1 class="display-1"></i>Bappy0X</h1>
                     <h4>Welcome to my <i class="fas fa-book align-middle"></i> of Software and Web Development!</h4>
                 </div>
             </div>
@@ -64,7 +64,9 @@
 
     <!--Navigation Bar-->
     <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light mb-3">
-        <a class="navbar-brand" href="{{ url_for('main.index') }}"><img src="{{ url_for('static', filename='img/logo.svg') }}" width="200" class="d-inline-block align-top"></a>
+        <a class="navbar-brand" href="{{ url_for('main.index') }}">
+            <img src="{{ url_for('static', filename='img/logo.png') }}" width="50" class="d-inline-block align-top mr-2">Bappy0X;
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -118,15 +120,15 @@
         </div>
     </div>-->
 
-    <!--Notifications-->
+    <!--Notifications
     <div style="position: relative;">
         <div style="position: fixed; bottom: 10px; left: 10px; min-width: 300px; z-index:9999;">
             {% for i in notifications %}
             <div class="toast" role="alert" data-autohide="false">
                 <div class="toast-header">
                     <strong class="mr-auto">{{ i["header"] }}</strong>
-                    {% if i["timestamp"] %}<small class="text-muted">{{ i["timestamp"] }}</small>{% endif %}
-                    {% if i["important"] %}<span class="badge badge-warning ml-1">Important</span>{% endif %}
+                    {% if i.get("timestamp") %}<small class="text-muted">{{ i["timestamp"] }}</small>{% endif %}
+                    {% if i.get("important") %}<span class="badge badge-warning ml-1">Important</span>{% endif %}
                     <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">
                         <span>&times;</span>
                     </button>
@@ -135,7 +137,7 @@
             </div>
             {% endfor %}
         </div>
-    </div>
+    </div>-->
 
     <!--Content-->
     <div class="content">{% block content %}{% endblock %}</div>
@@ -150,7 +152,6 @@
                         <li><a href="{{ url_for('links.github') }}"><i class="fab fa-github" data-toggle="tooltip" data-placement="bottom" title="GitHub"></i></a></li>
                         <li><a href="{{ url_for('links.discord') }}"><i class="fab fa-discord" data-toggle="tooltip" data-placement="bottom" title="Discord"></i></a></li>
                         <li><a href="{{ url_for('links.lbry') }}"><i class="fas fa-film" data-toggle="tooltip" data-placement="bottom" title="LBRY"></i></a></li>
-                        <li><a href="{{ url_for('links.linkedin') }}"><i class="fab fa-linkedin" data-toggle="tooltip" data-placement="bottom" title="LinkedIn"></i></a></li>
                     </ul>
                 </div>
                 <div class="col-sm-4">
@@ -162,9 +163,11 @@
                     <p>Text3</p>
                 </div>
                 <div class="col-12 text-center mt-3">
-                    <img src="{{ url_for('static', filename='img/logo.svg') }}" width="200" class="mb-1">
-                    <p>Made with ❤️ using HTML, CSS, Bootstrap, jQuery and Flask.</p>
-                    <h4>Copyright © Joshua Vaughan 2020</h4>
+                    <p class="footer-brand">
+                        <img src="{{ url_for('static', filename='img/logo.png') }}" width="50" class="d-inline-block align-top mr-2">Bappy0X;
+                    </p>
+                    <p>Made with ❤️ using HTML, CSS, Bootstrap, jQuery, Flask and SQLite3.</p>
+                    <h4>Copyright © Bappy0X (Joshua Vaughan) 2020</h4>
                 </div>
             </div>
         </div>

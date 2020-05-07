@@ -33,8 +33,9 @@ def create_app():
         return render_template("pages/placeholder.html", carousel=False, nav_active="contact", notifications=notifications.render())
     app.register_blueprint(main)
 
-    from views import links
+    from views import links, videos
     app.register_blueprint(links)
+    app.register_blueprint(videos)
 
     return app
 
