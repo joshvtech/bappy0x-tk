@@ -1,4 +1,5 @@
-from flask import Flask, render_template, Blueprint, redirect
+from flask import Flask, render_template, Blueprint, redirect, send_from_directory
+from os.path import join
 
 from static.db.models import db, links, videos, notifications
 
@@ -8,6 +9,10 @@ def create_app():
     app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///static/db/db.sqlite3"
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     db.init_app(app)
+
+    @app.route('/favicon.ico')
+    def favicon():
+        return send_from_directory(join(app.root_path, "static/img"), "favicon.ico")
 
     @app.errorhandler(403)
     def invalid(error):
