@@ -64,7 +64,7 @@
 
     <!--Navigation Bar-->
     <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light mb-3">
-        <a class="navbar-brand" href="{{ url_for('main.index') }}">
+        <a class="navbar-brand" href="{{ url_for('index') }}">
             <img src="{{ url_for('static', filename='img/logo.png') }}" width="50" class="d-inline-block align-top mr-2">Bappy0X;
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown">
@@ -80,10 +80,10 @@
             <span class="navbar-text">My Diary of Software and Web Development</span>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item {% if nav_active == 'home' %}active{% endif %}">
-                    <a class="nav-link" href="{{ url_for('main.index') }}">Home</a>
+                    <a class="nav-link" href="{{ url_for('index') }}">Home</a>
                 </li>
                 <li class="nav-item {% if nav_active == 'my-specialties' %}active{% endif %}">
-                    <a class="nav-link" href="{{ url_for('main.my_specialties') }}">My Specialties</a>
+                    <a class="nav-link" href="{{ url_for('my_specialties') }}">My Specialties</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle disabled" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown">My Projects</a>
@@ -94,7 +94,7 @@
                     </div>
                 </li>
                 <li class="nav-item {% if nav_active == 'contact' %}active{% endif %}">
-                    <a class="nav-link" href="{{ url_for('main.contact') }}">Contact</a>
+                    <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
                 </li>
             </ul>
         </div>
@@ -149,11 +149,11 @@
                 <div class="col-sm-4">
                     <h3>Social Media</h3>
                     <ul class="footer-social">
-                        <li><a href="{{ url_for('links.github') }}"><i class="fab fa-github" data-toggle="tooltip" data-placement="bottom" title="GitHub"></i></a></li>
-                        <li><a href="{{ url_for('links.discord') }}"><i class="fab fa-discord" data-toggle="tooltip" data-placement="bottom" title="Discord"></i></a></li>
-                        <li><a href="{{ url_for('links.lbry') }}"><i class="fas fa-film" data-toggle="tooltip" data-placement="bottom" title="LBRY"></i></a></li>
-                        <li><a href="{{ url_for('links.patreon') }}"><i class="fab fa-patreon" data-toggle="tooltip" data-placement="bottom" title="Patreon"></i></a></li>
-                        <li><a href="{{ url_for('links.fiverr') }}"><i class="fab fa-fonticons-fi" data-toggle="tooltip" data-placement="bottom" title="Fiverr"></i></a></li>
+                        <li><a href="{{ url_for('redirect_links', name='github') }}"><i class="fab fa-github" data-toggle="tooltip" data-placement="bottom" title="GitHub"></i></a></li>
+                        <li><a href="{{ url_for('redirect_links', name='discord') }}"><i class="fab fa-discord" data-toggle="tooltip" data-placement="bottom" title="Discord"></i></a></li>
+                        <li><a href="{{ url_for('redirect_links', name='lbry') }}"><i class="fas fa-film" data-toggle="tooltip" data-placement="bottom" title="LBRY"></i></a></li>
+                        <li><a href="{{ url_for('redirect_links', name='patreon') }}"><i class="fab fa-patreon" data-toggle="tooltip" data-placement="bottom" title="Patreon"></i></a></li>
+                        <li><a href="{{ url_for('redirect_links', name='fiverr') }}"><i class="fab fa-fonticons-fi" data-toggle="tooltip" data-placement="bottom" title="Fiverr"></i></a></li>
                     </ul>
                 </div>
                 <div class="col-sm-4">

@@ -5,6 +5,32 @@ from humanize import naturaltime
 
 db = SQLAlchemy()
 
+class links(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(120))
+    url = db.Column(db.String(120))
+
+    def __init__(self, id, name, url):
+        self.id = id
+        self.name = name
+        self.url = url
+
+    def __repr__(self):
+        return(f"<link {self.id}>")
+
+class videos(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(120))
+    url = db.Column(db.String(120))
+
+    def __init__(self, id, name, url):
+        self.id = id
+        self.name = name
+        self.url = url
+
+    def __repr__(self):
+        return(f"<video {self.id}>")
+
 class notifications(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     important = db.Column(db.Boolean)

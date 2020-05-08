@@ -47,7 +47,7 @@
                                 Style Sheets and Scripts. HTML uses tags (known as elements) and DOM, which is very simplistic.<br>I am very advanced in this language and it is the 
                                 first front-end language that I ever learnt.
                             </p>
-                            <a class="btn btn-info disabled" href="{{ url_for('videos.html_beginners') }}" target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Watch my introduction to HTML."><i class="fas fa-film"></i> My Video</a>
+                            <a class="btn btn-info disabled" href="{{ url_for('redirect_videos', name='html_beginners') }}" target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Watch my introduction to HTML."><i class="fas fa-film"></i> My Video</a>
                             <a class="btn btn-secondary" href="https://www.w3schools.com/html/default.asp" target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Click here to learn some basic HTML5 skills.">Find out more!</a>
                         </div>
                     </div>
@@ -63,7 +63,7 @@
                                 A CSS file is used in order to describe the presentation of a HTML document. This allows for complete control over how the website looks to the end 
                                 user.<br>Along with HTML, I am very experienced in CSS and it was one of the first front-end languages that I learnt.
                             </p>
-                            <a class="btn btn-info disabled" href="{{ url_for('videos.css_beginners') }}" target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Watch my introduction to CSS."><i class="fas fa-film"></i> My Video</a>
+                            <a class="btn btn-info disabled" href="{{ url_for('redirect_videos', name='css_beginners') }}" target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Watch my introduction to CSS."><i class="fas fa-film"></i> My Video</a>
                             <a class="btn btn-secondary" href="https://www.w3schools.com/css/default.asp" target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Click here to learn some basic CSS3 skills.">Find out more!</a>
                             <div class="card mt-3">
                                 <img src="/static/img/icons/bootstrap.png" class="w-25 mt-3">
@@ -138,7 +138,7 @@
                                 creating the back-end for web applications.<br>Python is my favourite language ever. It's extremely powerful and can do anything you'd like to throw 
                                 at it. It can be used to create games, create discord bots, read your voice and even recognise your face!
                             </p>
-                            <a class="btn btn-info disabled" href="{{ url_for('videos.python_beginners') }}" target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Watch my introduction to CSS."><i class="fas fa-film"></i> My Video</a>
+                            <a class="btn btn-info disabled" href="{{ url_for('redirect_videos', name='python_beginners') }}" target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Watch my introduction to CSS."><i class="fas fa-film"></i> My Video</a>
                             <a class="btn btn-secondary" href="https://www.python.org/" target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Click here to learn more about Python.">Find out more!</a>
                             <div class="card mt-3">
                                 <img src="/static/img/icons/gunicorn.png" class="w-25 mt-3">
@@ -308,7 +308,7 @@
                                 GitHub is used in order to store all of my Git repositories online. It allows people to take a look at peoples projects and show/tell them how they can 
                                 improve or expand on their work. Many projects are hosted entirely on GitHub and many developers are pro-open source.
                             </p>
-                            <a class="btn btn-info" href="{{ url_for('links.github') }}" target="_blank" role="button"><i class="fab fa-github"></i> My GitHub</a>
+                            <a class="btn btn-info" href="{{ url_for('redirect_links', name='github') }}" target="_blank" role="button"><i class="fab fa-github"></i> My GitHub</a>
                             <a class="btn btn-secondary" href="https://github.com/" target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Click here to visit GitHub.">Find out more!</a>
                         </div>
                     </div>

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block title %}Error {{ code }}{% endblock %}
+
+{% block content %}
+<h1>Error {{ code }}</h1>
+<p>Sorry, something went wrong!</p>
+<p>Error: <code>{{ flask_error }}</code></p>
+<p><a href="{{ url_for('index') }}">Click Here</a> to go home.</p>
+{% endblock %}

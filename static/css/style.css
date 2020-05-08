@@ -34,6 +34,12 @@ html, body {
     width: 90vw;
     margin: auto;
 }
+code {
+    color: #da3232 !important;
+    background-color: beige;
+    border: 5px solid beige;
+    border-radius: 5px;
+}
 .card img {
     align-self: center;
 }
