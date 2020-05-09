@@ -131,7 +131,7 @@
         </div>
     </div>-->
 
-    <!--Notifications
+    <!--Notifications-->
     <div style="position: relative;">
         <div style="position: fixed; bottom: 10px; left: 10px; min-width: 300px; z-index:9999;">
             {% for i in notifications %}
@@ -148,7 +148,7 @@
             </div>
             {% endfor %}
         </div>
-    </div>-->
+    </div>
 
     <!--Content-->
     <div class="content">{% block content %}{% endblock %}</div>
@@ -164,7 +164,7 @@
                         <li><a href="{{ url_for('redirect_links', name='discord') }}"><i class="fab fa-discord" data-toggle="tooltip" data-placement="bottom" title="Discord"></i></a></li>
                         <li><a href="{{ url_for('redirect_links', name='lbry') }}"><i class="fas fa-film" data-toggle="tooltip" data-placement="bottom" title="LBRY"></i></a></li>
                         <li><a href="{{ url_for('redirect_links', name='patreon') }}"><i class="fab fa-patreon" data-toggle="tooltip" data-placement="bottom" title="Patreon"></i></a></li>
-                        <li><a href="{{ url_for('redirect_links', name='fiverr') }}"><i class="fab fa-fonticons-fi" data-toggle="tooltip" data-placement="bottom" title="Fiverr"></i></a></li>
+                        <!--<li><a href="{{ url_for('redirect_links', name='fiverr') }}"><i class="fab fa-fonticons-fi" data-toggle="tooltip" data-placement="bottom" title="Fiverr"></i></a></li>-->
                         <li><a href="{{ url_for('redirect_links', name='email') }}" target="_blank"><i class="far fa-envelope" data-toggle="tooltip" data-placement="bottom" title="Email"></i></a></li>
                     </ul>
                 </div>
