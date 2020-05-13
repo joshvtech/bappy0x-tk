@@ -4,7 +4,14 @@ from os.path import join
 from static.db.models import db, links, videos, notifications
 
 def create_app():
+    from views.file_hoster import file_hoster
+    from views.news_bot import news_bot
+    from views.url_shortener import url_shortener
+
     app = Flask(__name__)
+    app.register_blueprint(file_hoster, url_prefix="/file-hoster")
+    app.register_blueprint(news_bot, url_prefix="/news-bot")
+    app.register_blueprint(url_shortener, url_prefix="/url-shortener")
 
     app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///static/db/db.sqlite3"
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False

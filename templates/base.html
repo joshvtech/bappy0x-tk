@@ -97,11 +97,11 @@
                     <a class="nav-link" href="{{ url_for('my_specialties') }}">My Specialties</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle disabled" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown">My Projects</a>
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown">My Projects</a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item disabled" href="#">Coming Soon</a>
-                        <a class="dropdown-item disabled" href="#">Coming Soon</a>
-                        <a class="dropdown-item disabled" href="#">Coming Soon</a>
+                        <a class="dropdown-item" href="{{ url_for('file-hoster.index') }}">File Hoster</a>
+                        <a class="dropdown-item" href="{{ url_for('news-bot.index') }}">News-Bot</a>
+                        <a class="dropdown-item" href="{{ url_for('url-shortener.index') }}">URL Shortener</a>
                     </div>
                 </li>
                 <li class="nav-item {% if nav_active == 'contact' %}active{% endif %}">
