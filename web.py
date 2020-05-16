@@ -1,11 +1,17 @@
-from flask import Flask, render_template, Blueprint, redirect, send_from_directory
+from flask import Flask, render_template, Blueprint, redirect, send_from_directory, url_for
+from flask_dance.contrib.github import make_github_blueprint, github
 from os.path import join
+
+from dotenv import load_dotenv
+load_dotenv(override=True)
+from os import getenv
 
 from static.db.models import db, links, videos, notifications
 
 def create_app():
+    #NOTE: STANDARD STUFF
     app = Flask(__name__)
-    
+    app.secret_key = getenv("SECRET_KEY")
     app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///static/db/db.sqlite3"
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     db.init_app(app)
@@ -23,6 +29,7 @@ def create_app():
     def favicon():
         return send_from_directory(join(app.root_path, "static/img"), "favicon.ico")
 
+    #NOTE: ERRORS
     @app.errorhandler(403)
     def invalid(error):
         return render_template("pages/error.html", code=403, flask_error=error), 403
@@ -33,6 +40,24 @@ def create_app():
     def internal_server_error(error):
         return render_template("pages/error.html", code=500, flask_error=error), 500
 
+    #NOTE: GITHUB LOGIN
+    github_blueprint = make_github_blueprint(
+        client_id=getenv("GITHUB_CLIENT_ID"),
+        client_secret=getenv("GITHUB_SECRET"),
+        authorized_url="/github/authorised"
+    )
+    app.register_blueprint(github_blueprint, url_prefix="/login")
+    
+    @app.route("/github_login")
+    def github_login():
+        if not github.authorized:
+            return redirect(url_for("github.login"))
+        info = github.get("/user")
+        if info.ok:
+            return f"<h1>You are @{info.json()['login']} on GitHub</h1>"
+        return "<h1>Request failed</h1>", 500
+
+    #NOTE: STANDARD ROUTES
     @app.route("/")
     def index():
         return render_template("pages/index.html", carousel=True, nav_active="home", notifications=notifications.render())
@@ -43,6 +68,7 @@ def create_app():
     def contact():
         return render_template("pages/placeholder.html", carousel=False, nav_active="contact", notifications=notifications.render())
 
+    #NOTE: REDIRECTS
     @app.route("/links/<name>")
     def redirect_links(name):
         found = links.query.filter_by(name=name.lower()).first()
