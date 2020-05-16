@@ -1,20 +1,30 @@
 from flask import Flask, render_template, Blueprint, redirect, send_from_directory, url_for
-from flask_dance.contrib.github import make_github_blueprint, github
+
+from sqlalchemy.orm.exc import NoResultFound
+
+from flask_dance.contrib.github import make_github_blueprint, github#, make_google_blueprint, google
+from flask_login import current_user, LoginManager, login_required, login_user, logout_user
+from flask_dance.consumer.storage.sqla import SQLAlchemyStorage
+from flask_dance.consumer import oauth_authorized
+
 from os.path import join
 
 from dotenv import load_dotenv
 load_dotenv(override=True)
 from os import getenv
 
-from static.db.models import db, links, videos, notifications
+from static.db.models import *#db, links, videos, notifications
 
 def create_app():
     #NOTE: STANDARD STUFF
     app = Flask(__name__)
-    app.secret_key = getenv("SECRET_KEY")
+
+    app.config["SECRET_KEY"] = getenv("SECRET_KEY")
     app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///static/db/db.sqlite3"
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
     db.init_app(app)
+    login_manager = LoginManager(app)
 
     from views.file_hoster import file_hoster as file_blueprint
     app.register_blueprint(file_blueprint, url_prefix="/file-hoster")
@@ -40,6 +50,17 @@ def create_app():
     def internal_server_error(error):
         return render_template("pages/error.html", code=500, flask_error=error), 500
 
+    #NOTE: LOGIN MANAGEMENT
+    @login_manager.user_loader
+    def load_user(user_id):
+        return users.query.get(int(user_id))
+
+    @app.route("/log-out")
+    @login_required
+    def log_out():
+        logout_user()
+        return redirect(url_for("index"))
+
     #NOTE: GITHUB LOGIN
     github_blueprint = make_github_blueprint(
         client_id=getenv("GITHUB_CLIENT_ID"),
@@ -47,7 +68,23 @@ def create_app():
         authorized_url="/github/authorised"
     )
     app.register_blueprint(github_blueprint, url_prefix="/login")
-    
+
+    github_blueprint.storage = SQLAlchemyStorage(OAuth, db.session, user=current_user, user_required=False)
+
+    @oauth_authorized.connect_via(github_blueprint)
+    def github_logged_in(blueprint, token):
+        info = blueprint.session.get("/user")
+        if info.ok:
+            username = info.json()['login']
+            query = users.query.filter_by(username=username)
+            try:
+                user = query.one()
+            except NoResultFound:
+                user = users(username=username)
+                db.session.add(user)
+                db.session.commit()
+            login_user(user)
+
     @app.route("/github_login")
     def github_login():
         if not github.authorized:
@@ -56,6 +93,24 @@ def create_app():
         if info.ok:
             return f"<h1>You are @{info.json()['login']} on GitHub</h1>"
         return "<h1>Request failed</h1>", 500
+
+    
+    #NOTE: GOOGLE LOGIN
+    """google_blueprint = make_google_blueprint(
+        client_id=getenv("GOOGLE_CLIENT_ID"),
+        client_secret=getenv("GOOGLE_SECRET"),
+        authorized_url="/google/authorised"
+    )
+    app.register_blueprint(google_blueprint, url_prefix="/login")
+    
+    @app.route("/github_login")
+    def google_login():
+        if not github.authorized:
+            return redirect(url_for("github.login"))
+        info = github.get("/user")
+        if info.ok:
+            return f"<h1>You are @{info.json()['login']} on GitHub</h1>"
+        return "<h1>Request failed</h1>", 500"""
 
     #NOTE: STANDARD ROUTES
     @app.route("/")

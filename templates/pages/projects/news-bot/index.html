@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}News-Bot{% endblock %}
+
+{% block content %}
+{% if not github.authorized %}
+<a class="btn btn-dark" href="{{ url_for('github_login') }}" role="button"><i class="fab fa-github"></i> Login with GitHub</a>
+{% else %}
+<h1>Welcome, {{ github.get("/user").json()["login"] }}!</h1>
+<a class="btn btn-primary" href="{{ url_for('log_out') }}" role="button"><i class="fas fa-sign-out-alt"></i> Log Out</a>
+{% endif %}
+{% endblock %}
