@@ -4,18 +4,20 @@ from os.path import join
 from static.db.models import db, links, videos, notifications
 
 def create_app():
-    from views.file_hoster import file_hoster
-    from views.news_bot import news_bot
-    from views.url_shortener import url_shortener
-
     app = Flask(__name__)
-    app.register_blueprint(file_hoster, url_prefix="/file-hoster")
-    app.register_blueprint(news_bot, url_prefix="/news-bot")
-    app.register_blueprint(url_shortener, url_prefix="/url-shortener")
-
+    
     app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///static/db/db.sqlite3"
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     db.init_app(app)
+
+    from views.file_hoster import file_hoster as file_blueprint
+    app.register_blueprint(file_blueprint, url_prefix="/file-hoster")
+
+    from views.news_bot import news_bot as news_blueprint
+    app.register_blueprint(news_blueprint, url_prefix="/news-bot")
+
+    from views.url_shortener import url_shortener as url_blueprint
+    app.register_blueprint(url_blueprint, url_prefix="/url-shortener")
 
     @app.route('/favicon.ico')
     def favicon():
