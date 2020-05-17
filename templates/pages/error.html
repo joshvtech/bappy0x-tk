@@ -3,8 +3,10 @@
 {% block title %}Error {{ code }}{% endblock %}
 
 {% block content %}
-<h1>Error {{ code }}</h1>
-<p>Sorry, something went wrong!</p>
+<img src="{{ url_for('static', filename='img/error.gif') }}">
+<br><br>
+<h1>{{ self.title() }}</h1>
+<p>We don't make mistakes - we just have happy accidents!</p>
 <p>Error: <code>{{ flask_error }}</code></p>
 <p><a href="{{ url_for('index') }}">Click Here</a> to go home.</p>
 {% endblock %}
