@@ -13,14 +13,14 @@ from dotenv import load_dotenv
 load_dotenv(override=True)
 from os import getenv
 
-from static.db.models import *#db, links, videos, notifications
+from static.db.models import *
 
 def create_app():
     #NOTE: STANDARD STUFF
     app = Flask(__name__)
 
     app.config["SECRET_KEY"] = getenv("SECRET_KEY")
-    app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///static/db/db.sqlite3"
+    app.config["SQLALCHEMY_DATABASE_URI"] = getenv("DATABASE_URL")
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
     db.init_app(app)
@@ -93,24 +93,6 @@ def create_app():
         if info.ok:
             return f"<h1>You are @{info.json()['login']} on GitHub</h1>"
         return "<h1>Request failed</h1>", 500
-
-    
-    #NOTE: GOOGLE LOGIN
-    """google_blueprint = make_google_blueprint(
-        client_id=getenv("GOOGLE_CLIENT_ID"),
-        client_secret=getenv("GOOGLE_SECRET"),
-        authorized_url="/google/authorised"
-    )
-    app.register_blueprint(google_blueprint, url_prefix="/login")
-    
-    @app.route("/github_login")
-    def google_login():
-        if not github.authorized:
-            return redirect(url_for("github.login"))
-        info = github.get("/user")
-        if info.ok:
-            return f"<h1>You are @{info.json()['login']} on GitHub</h1>"
-        return "<h1>Request failed</h1>", 500"""
 
     #NOTE: STANDARD ROUTES
     @app.route("/")

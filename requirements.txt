@@ -2,7 +2,10 @@ gunicorn
 python-dotenv
 
 flask==1.1.2
+
 flask-sqlalchemy==2.4.1
+psycopg2
+
 flask-login
 blinker
 Flask-Dance[sqla]
