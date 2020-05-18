@@ -1,2 +1,2 @@
 web: gunicorn "web:create_app()"
-worker: worker.py
+worker: python worker.py
