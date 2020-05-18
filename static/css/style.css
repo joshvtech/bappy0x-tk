@@ -44,6 +44,22 @@ code {
     align-self: center;
 }
 
+.downloadicon {font-size: 2rem;}
+.downloadicon.detected {font-size: 3rem;}
+.downloadicon:hover {text-decoration: none;}
+
+.downloadicon.windows {color: #0078d7;}
+.downloadicon.windows:hover {color: #0045a4;}
+
+.downloadicon.android {color: #a4c639;}
+.downloadicon.android:hover {color: #719306;}
+
+.downloadicon.linux {color: #444;}
+.downloadicon.linux:hover {color: #111;}
+
+.downloadicon.github {color: #444;}
+.downloadicon.github:hover {color: #111;}
+
 .footer {
     border-top: 4px solid #f2f2f2;
 }

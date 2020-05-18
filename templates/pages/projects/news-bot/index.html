@@ -70,9 +70,26 @@
             <h2>Downloads</h2>
         </div>
         <div class="col-md-8 text-left">
-            <p>
-                Downloads coming soon.
-            </p>
+            {% set platform = request.user_agent.platform %}
+            {% if platform in ["windows", "android", "linux"] %}
+                <p>Download the {{ platform.title() }} build below! </p>
+                {% if platform == "windows" %}
+                <a href="" class="downloadicon detected windows"><i class="fab fa-windows"></i> Windows</a>
+                {% elif platform == "android" %}
+                <a href="" class="downloadicon detected android"><i class="fab fa-android"></i> Android</a>
+                {% elif platform == "linux" %}
+                <a href="" class="downloadicon detected linux"><i class="fab fa-linux"></i> Linux</a>
+                {% endif %}
+            {% else %}
+            <p>Your Operating System ({{ platform.title() }}), doesn't appear to be supported. Here are all possible downloads:</p>
+            <a href="" class="downloadicon windows"><i class="fab fa-windows"></i> Windows</a>
+            <br>
+            <a href="" class="downloadicon android"><i class="fab fa-android"></i> Android</a>
+            <br>
+            <a href="" class="downloadicon linux"><i class="fab fa-linux"></i> Linux</a>
+            {% endif %}
+            <br>
+            <a href="{{ url_for('redirect_links', name='site-repo') }}" target="_blank" class="downloadicon github"><i class="fab fa-github"></i> Source Code <i class="fas fa-external-link-alt align-text-top" style="font-size:1rem"></i></a>
         </div>
     </div>
 </div>
