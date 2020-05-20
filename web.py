@@ -101,9 +101,9 @@ def create_app():
     @app.route("/")
     def index():
         return render_template("pages/index.html", carousel=True, nav_active="home", notifications=notifications.render())
-    @app.route("/my-specialties")
-    def my_specialties():
-        return render_template("pages/my-specialties.html", carousel=False, nav_active="my-specialties", notifications=notifications.render())
+    @app.route("/my-proficiencies")
+    def my_proficiencies():
+        return render_template("pages/my-proficiencies.html", carousel=False, nav_active="my-proficiencies", notifications=notifications.render())
     @app.route("/contact")
     def contact():
         return render_template("pages/placeholder.html", carousel=False, nav_active="contact", notifications=notifications.render())

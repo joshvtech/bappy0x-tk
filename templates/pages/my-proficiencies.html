@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 
-{% block title %}My Specialties{% endblock %}
+{% block title %}My Proficiencies{% endblock %}
 
 {% block content %}
-<h2 class="display-2 text-center" id="my-specialties">My Specialties</h2>
+<h2 class="display-2 text-center">My Proficiencies</h2>
 
 <ul class="nav nav-tabs">
     <li class="nav-item">
@@ -38,7 +38,7 @@
                 <!--HTML-->
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                     <div class="card mt-3">
-                        <img src="/static/img/icons/html5.png" class="w-25 mt-3">
+                        <img src="{{ url_for('static', filename='img/icons/html5.png') }}" class="w-25 mt-3">
                         <div class="card-body">
                             <h5 class="card-title"><abbr title="HyperText Markup Language 5">HTML5</abbr></h5>
                             <h6 class="card-subtitle mb-2 text-muted">Plain user interface.</h6>
@@ -55,7 +55,7 @@
                 <!--CSS-->
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                     <div class="card mt-3">
-                        <img src="/static/img/icons/css3.png" class="w-25 mt-3">
+                        <img src="{{ url_for('static', filename='img/icons/css3.png') }}" class="w-25 mt-3">
                         <div class="card-body">
                             <h5 class="card-title"><abbr title="Cascading Style Sheets 3">CSS3</abbr></h5>
                             <h6 class="card-subtitle mb-2 text-muted">Styling for plain documents.</h6>
@@ -66,7 +66,7 @@
                             <a class="btn btn-info disabled" href="{{ url_for('redirect_videos', name='css_beginners') }}" target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Watch my introduction to CSS."><i class="fas fa-film"></i> My Video</a>
                             <a class="btn btn-secondary" href="https://www.w3schools.com/css/default.asp" target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Click here to learn some basic CSS3 skills.">Find out more!</a>
                             <div class="card mt-3">
-                                <img src="/static/img/icons/bootstrap.png" class="w-25 mt-3">
+                                <img src="{{ url_for('static', filename='img/icons/bootstrap.png') }}" class="w-25 mt-3">
                                 <div class="card-body mt-2">
                                     <h5 class="card-title">Bootstrap</h5>
                                     <h6 class="card-subtitle mb-2 text-muted">User Interface Framework</h6>
@@ -84,7 +84,7 @@
                 <!--JavaScript-->
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                     <div class="card mt-3">
-                        <img src="/static/img/icons/javascript.png" class="w-25 mt-3">
+                        <img src="{{ url_for('static', filename='img/icons/javascript.png') }}" class="w-25 mt-3">
                         <div class="card-body">
                             <h5 class="card-title">JavaScript</h5>
                             <h6 class="card-subtitle mb-2 text-muted">Front-end code execution.</h6>
@@ -94,7 +94,7 @@
                             </p>
                             <a class="btn btn-secondary" href="https://www.w3schools.com/js/default.asp" target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Click here to learn some basic JavaScript.">Find out more!</a>
                             <!--<div class="card mt-3">
-                                <img src="/static/img/icons/react.png" class="w-25 mt-3">
+                                <img src="{{ url_for('static', filename='img/icons/react.png') }}" class="w-25 mt-3">
                                 <div class="card-body mt-2">
                                     <h5 class="card-title">React</h5>
                                     <h6 class="card-subtitle mb-2 text-muted">User Interface Framework</h6>
@@ -104,7 +104,7 @@
                                 </div>
                             </div>
                             <div class="card mt-3">
-                                <img src="/static/img/icons/angular.png" class="w-25 mt-3">
+                                <img src="{{ url_for('static', filename='img/icons/angular.png') }}" class="w-25 mt-3">
                                 <div class="card-body mt-2">
                                     <h5 class="card-title">Angular</h5>
                                     <h6 class="card-subtitle mb-2 text-muted">User Interface Framework</h6>
@@ -129,7 +129,7 @@
                 <!--Python (Flask/Django)-->
                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                     <div class="card mt-3">
-                        <img src="/static/img/icons/python.png" class="w-25 mt-3">
+                        <img src="{{ url_for('static', filename='img/icons/python.png') }}" class="w-25 mt-3">
                         <div class="card-body">
                             <h5 class="card-title">Python (Flask/Django)</h5>
                             <h6 class="card-subtitle mb-2 text-muted">Server-side code execution.</h6>
@@ -141,7 +141,7 @@
                             <a class="btn btn-info disabled" href="{{ url_for('redirect_videos', name='python_beginners') }}" target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Watch my introduction to CSS."><i class="fas fa-film"></i> My Video</a>
                             <a class="btn btn-secondary" href="https://www.python.org/" target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Click here to learn more about Python.">Find out more!</a>
                             <div class="card mt-3">
-                                <img src="/static/img/icons/gunicorn.png" class="w-25 mt-3">
+                                <img src="{{ url_for('static', filename='img/icons/gunicorn.png') }}" class="w-25 mt-3">
                                 <div class="card-body mt-2">
                                     <h5 class="card-title">Gunicorn</h5>
                                     <h6 class="card-subtitle mb-2 text-muted">Client-Server Communication</h6>
@@ -151,7 +151,7 @@
                                         Gunicorn is extremely easy to use on nearly any machine, and it's a great choice if you wouldn't like to complicate your 
                                         <abbr title="Web Server Gateway Interface">WSGI</abbr>.
                                     </p>
-                                    <a class="btn btn-secondary" href="https://reactjs.org/" target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Click here to visit React.">Find out more!</a>
+                                    <a class="btn btn-secondary" href="https://gunicorn.org/" target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Click here to visit Gunicorn.">Find out more!</a>
                                 </div>
                             </div>
                         </div>
@@ -160,7 +160,7 @@
                 <!--JavaScript (Node.js & Express)-->
                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                     <div class="card mt-3">
-                        <img src="/static/img/icons/nodejs.png" class="w-25 mt-3">
+                        <img src="{{ url_for('static', filename='img/icons/nodejs.png') }}" class="w-25 mt-3">
                         <div class="card-body">
                             <h5 class="card-title">JavaScript (Node.js & Express)</h5>
                             <h6 class="card-subtitle mb-2 text-muted">Hypertext Markup Language</h6>
@@ -183,42 +183,67 @@
                     <h4 class="display-4">Software Languages</h4>
                     <p>These languages are used to create applications for a user to interact with.</p>
                 </div>
-                <!--Python-->
+                <!--Electron-->
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                     <div class="card mt-3">
-                        <img src="/static/img/icons/python.png" class="w-25 mt-3">
+                        <img src="{{ url_for('static', filename='img/icons/electron.png') }}" class="w-25 mt-3">
                         <div class="card-body">
-                            <h5 class="card-title">Python (Tkinter)</h5>
+                            <h5 class="card-title">JavaScript (Electron)</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Build web-based applications.</h6>
+                            <p class="card-text">
+                                Electron is built on Node.js and uses Chromium in order to function. It can use front end files (HTML, CSS, JS) or connect to a website to operate.
+                                Many applications are built on Electron, and it's very developer friendly. I personally use it in order to build desktop applications.
+                            </p>
+                            <a class="btn btn-secondary" href="https://www.electronjs.org/" target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Click here to learn more about Electron.">Find out more!</a>
+                        </div>
+                    </div>
+                </div>
+                <!--Dart-->
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                    <div class="card mt-3">
+                        <img src="{{ url_for('static', filename='img/icons/dart.png') }}" class="w-25 mt-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Dart</h5>
                             <h6 class="card-subtitle mb-2 text-muted">Hypertext Markup Language</h6>
                             <p class="card-text">
-                                Pythons Tkinter library can be used to create both sophisticated and basic software/applciations alike. It's a lot more confusing to beginners, but once 
-                                you get the hang of it, you can easily create whatever you like. As this is also Python, you can expand your application however you like as Python is 
-                                near enough limitless.<br>Tkinter is my go-to for creating simple applications that I would like to make in a small amount of time, to have a 
-                                demonstration model for a full-scale application I'd like to make, or to make personal software to handle features on other applications.
+                                Developed by Google, Dart is a programming language that is used to create applications on mobile platforms (Android and iOS) it can also be used in
+                                order to build desktop, server and web applications. It has C-Style syntax and is obejct oriented. It's able to compile native code or JavaScript.
                             </p>
-                            <a class="btn btn-secondary" href="https://docs.python.org/3/library/tkinter.html" target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Click here to learn more about Tkinter.">Find out more!</a>
+                            <a class="btn btn-secondary" href="https://dart.dev/" target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Click here to learn more about Dart.">Find out more!</a>
+                            <div class="card mt-3">
+                                <img src="{{ url_for('static', filename='img/icons/flutter.png') }}" class="w-25 mt-3">
+                                <div class="card-body mt-2">
+                                    <h5 class="card-title">Flutter</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted"><abbr title="User Interface">UI</abbr> Framework</h6>
+                                    <p class="card-text">
+                                        Flutter is a UI framework made for Dart. It can be used for applications on many platforms, including Android, iOS, Windows, Mac and Linux.
+                                    </p>
+                                    <a class="btn btn-secondary" href="https://flutter.dev/" target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Click here to visit Flutter.">Find out more!</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <!--C#-->
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                     <div class="card mt-3">
-                        <img src="/static/img/icons/csharp.png" class="w-25 mt-3">
+                        <img src="{{ url_for('static', filename='img/icons/csharp.png') }}" class="w-25 mt-3">
                         <div class="card-body">
-                            <h5 class="card-title"><abbr title="C Sharp">C#</abbr></h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Build .NET applications.</h6>
+                            <h5 class="card-title"><abbr title="C Sharp">C#</abbr> (.NET)</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Build "Form" applications.</h6>
                             <p class="card-text">
                                 C# uses Microsoft's .NET library in order to create applications that are compatible with many different operating systems. It uses object oriented 
-                                programming methods and is somewhat easy to learn - if you have prior experience with programming.
+                                programming methods and is somewhat easy to learn - if you have prior experience with programming. C# is definitely one of my favourites for software 
+                                development - it's really fun, and really intuitive.
                             </p>
                             <a class="btn btn-secondary" href="https://docs.microsoft.com/en-us/dotnet/csharp/" target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Click here to learn some C#.">Find out more!</a>
                         </div>
                     </div>
                 </div>
-                <!--C++-->
+                <!--C++
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                     <div class="card mt-3">
-                        <img src="/static/img/icons/cpp.png" class="w-25 mt-3">
+                        <img src="{{ url_for('static', filename='img/icons/cpp.png') }}" class="w-25 mt-3">
                         <div class="card-body">
                             <h5 class="card-title"><abbr title="C Plus Plus">C++</abbr></h5>
                             <h6 class="card-subtitle mb-2 text-muted">Build Windows applications.</h6>
@@ -229,7 +254,7 @@
                             <a class="btn btn-secondary" href="https://www.cplusplus.com/" target="_blank" role="button" data-toggle="tooltip" data-placement="bottom" title="Click here to learn more about C++.">Find out more!</a>
                         </div>
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>
     </div>
@@ -244,7 +269,7 @@
                 <!--Trello-->
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                     <div class="card mt-3">
-                        <img src="/static/img/icons/trello.png" class="w-25 mt-3">
+                        <img src="{{ url_for('static', filename='img/icons/trello.png') }}" class="w-25 mt-3">
                         <div class="card-body mt-2">
                             <h5 class="card-title">Trello</h5>
                             <h6 class="card-subtitle mb-2 text-muted">Project planning.</h6>
@@ -259,7 +284,7 @@
                 <!--TravisCI-->
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                     <div class="card mt-3">
-                        <img src="/static/img/icons/travisci.png" class="w-25 mt-3">
+                        <img src="{{ url_for('static', filename='img/icons/travisci.png') }}" class="w-25 mt-3">
                         <div class="card-body mt-2">
                             <h5 class="card-title">TravisCI</h5>
                             <h6 class="card-subtitle mb-2 text-muted">External testing.</h6>
@@ -275,7 +300,7 @@
                 <!--CircleCI-->
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                     <div class="card mt-3">
-                        <img src="/static/img/icons/circleci.png" class="w-25 mt-3">
+                        <img src="{{ url_for('static', filename='img/icons/circleci.png') }}" class="w-25 mt-3">
                         <div class="card-body mt-2">
                             <h5 class="card-title">CircleCI</h5>
                             <h6 class="card-subtitle mb-2 text-muted">External testing.</h6>
@@ -300,7 +325,7 @@
                 <!--GitHub-->
                 <div class="col-xs-12 col-sm-6 col-md-12 col-lg-3">
                     <div class="card mt-3">
-                        <img src="/static/img/icons/github.png" class="w-25 mt-3">
+                        <img src="{{ url_for('static', filename='img/icons/github.png') }}" class="w-25 mt-3">
                         <div class="card-body mt-2">
                             <h5 class="card-title">GitHub</h5>
                             <h6 class="card-subtitle mb-2 text-muted">Open Source file hosting.</h6>
@@ -316,7 +341,7 @@
                 <!--Heroku-->
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="card mt-3">
-                        <img src="/static/img/icons/heroku.png" class="w-25 mt-3">
+                        <img src="{{ url_for('static', filename='img/icons/heroku.png') }}" class="w-25 mt-3">
                         <div class="card-body mt-2">
                             <h5 class="card-title">Heroku</h5>
                             <h6 class="card-subtitle mb-2 text-muted"><abbr title="Platform as a Service">PaaS</abbr></h6>
@@ -332,7 +357,7 @@
                 <!--Docker-->
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="card mt-3">
-                        <img src="/static/img/icons/docker.png" class="w-25 mt-3">
+                        <img src="{{ url_for('static', filename='img/icons/docker.png') }}" class="w-25 mt-3">
                         <div class="card-body mt-2">
                             <h5 class="card-title">Docker</h5>
                             <h6 class="card-subtitle mb-2 text-muted"><abbr title="Platform as a Service">PaaS</abbr></h6>
@@ -347,7 +372,7 @@
                 <!--Glitch-->
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="card mt-3">
-                        <img src="/static/img/icons/glitch.png" class="w-25 mt-3">
+                        <img src="{{ url_for('static', filename='img/icons/glitch.png') }}" class="w-25 mt-3">
                         <div class="card-body mt-2">
                             <h5 class="card-title">Glitch</h5>
                             <h6 class="card-subtitle mb-2 text-muted"><abbr title="Platform as a Service">PaaS</abbr></h6>
@@ -375,7 +400,7 @@
                 <!--PostgreSQL-->
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="card mt-3">
-                        <img src="/static/img/icons/postgresql.png" class="w-25 mt-3">
+                        <img src="{{ url_for('static', filename='img/icons/postgresql.png') }}" class="w-25 mt-3">
                         <div class="card-body mt-2">
                             <h5 class="card-title">PostgreSQL</h5>
                             <h6 class="card-subtitle mb-2 text-muted">Relational database.</h6>
@@ -389,7 +414,7 @@
                 <!--Redis-->
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="card mt-3">
-                        <img src="/static/img/icons/redis.png" class="w-25 mt-3">
+                        <img src="{{ url_for('static', filename='img/icons/redis.png') }}" class="w-25 mt-3">
                         <div class="card-body mt-2">
                             <h5 class="card-title">Redis</h5>
                             <h6 class="card-subtitle mb-2 text-muted">Key-value database.</h6>
@@ -403,7 +428,7 @@
                 <!--SQLite-->
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="card mt-3">
-                        <img src="/static/img/icons/sqlite.png" class="w-25 mt-3">
+                        <img src="{{ url_for('static', filename='img/icons/sqlite.png') }}" class="w-25 mt-3">
                         <div class="card-body mt-2">
                             <h5 class="card-title">SQLite</h5>
                             <h6 class="card-subtitle mb-2 text-muted">Serverless database.</h6>
@@ -417,7 +442,7 @@
                 <!--MongoDB-->
                 <div class="col-xs-12 col-sm-6 col-md-12 col-lg-3">
                     <div class="card mt-3">
-                        <img src="/static/img/icons/mongodb.png" class="w-25 mt-3">
+                        <img src="{{ url_for('static', filename='img/icons/mongodb.png') }}" class="w-25 mt-3">
                         <div class="card-body mt-2">
                             <h5 class="card-title">MongoDB</h5>
                             <h6 class="card-subtitle mb-2 text-muted">Non-SQL database.</h6>
