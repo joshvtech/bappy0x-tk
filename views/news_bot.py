@@ -3,7 +3,7 @@ from flask_dance.contrib.github import github
 
 from sys import path
 path.append("...")
-from static.db.models import notifications
+from public.db.models import notifications
 
 folderpath = "pages/projects/news-bot"
 

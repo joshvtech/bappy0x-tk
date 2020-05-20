@@ -13,11 +13,14 @@ from dotenv import load_dotenv
 load_dotenv(override=True)
 from os import getenv
 
-from static.db.models import *
+from public.db.models import *
 
 def create_app():
     #NOTE: STANDARD STUFF
     app = Flask(__name__)
+
+    app.static_url_path = "/public"
+    app.static_folder = join(app.root_path, "public")
 
     app.config["SECRET_KEY"] = getenv("SECRET_KEY")
     app.config["SQLALCHEMY_DATABASE_URI"] = getenv("DATABASE_URL")
@@ -37,7 +40,7 @@ def create_app():
 
     @app.route('/favicon.ico')
     def favicon():
-        return send_from_directory(join(app.root_path, "static/img"), "favicon.ico")
+        return send_from_directory(join(app.static_folder, "img"), "favicon.ico")
 
     #NOTE: ERRORS
     @app.errorhandler(403)

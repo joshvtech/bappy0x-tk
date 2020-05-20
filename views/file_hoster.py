@@ -2,7 +2,7 @@ from flask import Blueprint, render_template
 
 from sys import path
 path.append("...")
-from static.db.models import notifications
+from public.db.models import notifications
 
 folderpath = "pages/projects/file-hoster/"
 
