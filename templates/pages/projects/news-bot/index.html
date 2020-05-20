@@ -71,7 +71,7 @@
         </div>
         <div class="col-md-8 text-left">
             {% set platform = request.user_agent.platform %}
-            {% if platform in ["windows", "android", "linux"] %}
+            {% if platform in ["windows2", "android", "linux"] %}
                 <p>Download the {{ platform.title() }} build below! </p>
                 {% if platform == "windows" %}
                 <a href="" class="downloadicon detected windows"><i class="fab fa-windows"></i> Windows</a>

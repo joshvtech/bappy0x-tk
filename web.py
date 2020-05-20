@@ -1,4 +1,4 @@
-from flask import Flask, render_template, Blueprint, redirect, send_from_directory, url_for
+from flask import Flask, render_template, Blueprint, redirect, send_from_directory, url_for, abort
 
 from sqlalchemy.orm.exc import NoResultFound
 
@@ -109,11 +109,11 @@ def create_app():
     @app.route("/links/<name>")
     def redirect_links(name):
         found = links.query.filter_by(name=name.lower()).first()
-        return redirect(found.url, code=301) if found else (render_template("pages/error.html", code=500, flask_error="404 Not Found: That redirect couldn't be found!"), 500)
+        return redirect(found.url, code=301) if found else abort(404)
     @app.route("/videos/<name>")
     def redirect_videos(name):
         found = videos.query.filter_by(name=name.lower()).first()
-        return redirect(found.url, code=301) if found else (render_template("pages/error.html", code=500, flask_error="404 Not Found: That redirect couldn't be found!"), 500)
+        return redirect(found.url, code=301) if found else abort(404)
 
     return app
 

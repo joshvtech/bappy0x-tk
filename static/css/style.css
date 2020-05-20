@@ -54,8 +54,8 @@ code {
 .downloadicon.android {color: #a4c639;}
 .downloadicon.android:hover {color: #719306;}
 
-.downloadicon.linux {color: #444;}
-.downloadicon.linux:hover {color: #111;}
+.downloadicon.linux {color: #f6be0e;}
+.downloadicon.linux:hover {color: #c38b00;}
 
 .downloadicon.github {color: #444;}
 .downloadicon.github:hover {color: #111;}

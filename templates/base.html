@@ -9,9 +9,7 @@
 
     <meta property="og:title" content="{% block title %}{% endblock %} • Bappy0X" />
     <meta property="og:type" content="website" />
-    {% if request.endpoint %}
-    <meta property="og:url" content="{{ url_for(request.endpoint) }}" />
-    {% endif %}
+    <meta property="og:url" content="{{ request.base_url }}" />
     <meta property="og:image" content="{{ url_for('static', filename='img/logo_red.jpg') }}" />
     <meta property="og:description" content="Hello! My name's Josh, otherwise known as Bappy0X. This website is what I like to call my `Diary of Software and Web Development`." />
 
