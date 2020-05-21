@@ -27,7 +27,7 @@ class notifications(db.Model):
     important = db.Column(db.Boolean)
     timestamp = db.Column(db.DateTime)
     header = db.Column(db.String(120))
-    body = db.Column(db.String(120))
+    body = db.Column(db.String(512))
 
     def __init__(self, id, important, header, body):
         self.id = id
