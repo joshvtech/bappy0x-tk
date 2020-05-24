@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <meta property="og:title" content="Coming Soon! • Bappy0X" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://bappy0x.tk/" />
+    <meta property="og:image" content="img/logo_red.jpg" />
+    <meta property="og:description" content="Hello! My name's Josh, otherwise known as Bappy0X. This website is what I like to call my `Diary of Software and Web Development`." />
+
+    <title>Coming Soon! • Bappy0X</title>
+
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://bootswatch.com/4/lumen/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <!--Navigation Bar-->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light mb-3">
+        <a class="navbar-brand" href="/">
+            <img src="img/logo.png" width="50" class="d-inline-block align-top mr-2">Bappy0X;
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--<form class="form-inline mx-2 my-lg-0">
+            <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input checkbox-secondary" disabled="" id="customSwitch1">
+                <label class="custom-control-label" for="customSwitch1">Toggle light/dark</label>
+            </div>
+        </form>-->
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <span class="navbar-text">My Diary of Software and Web Development</span>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/my-proficiencies.html">My Proficiencies</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown">My Projects</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="">File Hoster</a>
+                        <a class="dropdown-item" href="">News-Bot</a>
+                        <a class="dropdown-item" href="">URL Shortener</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--Popup
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cookiePopUp">Launch static backdrop modal</button>
+    <div class="modal fade" id="cookiePopUp" data-backdrop="static" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cookiePopUpLabel">This website uses cookies!</h5>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">This website uses cookies in order to function correctly.</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Deny</button>
+                    <button type="button" class="btn btn-success">Accept</button>
+                </div>
+            </div>
+        </div>
+    </div>-->
+
+    <!--Notifications
+    <div style="position: relative;">
+        <div style="position: fixed; bottom: 10px; left: 10px; min-width: 300px; z-index:9999;">
+            {% for i in notifications %}
+            <div class="toast" role="alert" data-autohide="false">
+                <div class="toast-header">
+                    <strong class="mr-auto">{{ i["header"] }}</strong>
+                    {% if i.get("timestamp") %}<small class="text-muted">{{ i["timestamp"] }}</small>{% endif %}
+                    {% if i.get("important") %}<span class="badge badge-warning ml-1">Important</span>{% endif %}
+                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="toast-body">{{ i["body"] }}</div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>-->
+
+    <!--Content-->
+    <div class="content">
+        <h1 class="display-1 text-center">Coming Soon!</h1>
+    </div>
+
+    <!--Footer-->
+    <footer class="footer mt-3 py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h3>Social Media</h3>
+                    <ul class="footer-social">
+                        <li><a href="https://github.com/Bappy0X"><i class="fab fa-github" data-toggle="tooltip" data-placement="bottom" title="GitHub"></i></a></li>
+                        <li><a href="https://discord.gg/Cvc6pVK"><i class="fab fa-discord" data-toggle="tooltip" data-placement="bottom" title="Discord"></i></a></li>
+                        <li><a href="https://lbry.tv/$/invite/@Bappy0X:6"><i class="fas fa-film" data-toggle="tooltip" data-placement="bottom" title="LBRY"></i></a></li>
+                        <li><a href="https://www.patreon.com/bappy0x"><i class="fab fa-patreon" data-toggle="tooltip" data-placement="bottom" title="Patreon"></i></a></li>
+                        <li><a href="mailto:bappy0x@gmail.com" target="_blank"><i class="far fa-envelope" data-toggle="tooltip" data-placement="bottom" title="Email"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4">
+                    <h3>Source Code</h3>
+                    <p>
+                        This project is completely open source. If you wish to contribute or view the source code, you can do so by clicking 
+                        <a href="" target="_blank">Here</a>.<br>Please be aware that this project is licenced under the 
+                        <em>GNU General Public License v3.0</em>, you can read more about this license by clicking 
+                        <a href="" target="_blank">Here</a>.
+                    </p>
+                    
+                </div>
+                <div class="col-sm-4">
+                    <h3>Support</h3>
+                    <p>
+                        I operate completely out of my pocket to help others, I would very greatly appreciate if you helped support me by watching and tipping my videos on 
+                        <i class="fas fa-film" title="LBRY"></i> by clicking <a href="https://lbry.tv/$/invite/@Bappy0X:6">Here</a>.<br>You can become a 
+                        <i class="fab fa-patreon" title="Patreon"></i> by clicking <a href="https://www.patreon.com/bappy0x">Here</a>. Patrons receive some great rewards like 
+                        pre-release materials, exclusive Discord access and exclusive projects and videos.
+                    </p>
+                </div>
+                <div class="col-12 text-center mt-3">
+                    <p class="footer-brand">
+                        <img src="img/logo.png" width="50" class="d-inline-block align-top mr-2">Bappy0X;
+                    </p>
+                    <p>Made with ❤️ using HTML, CSS, Bootstrap, jQuery and hosted on GitHub pages.</p>
+                    <h4>Copyright © Bappy0X (Joshua Vaughan) 2020</h4>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
