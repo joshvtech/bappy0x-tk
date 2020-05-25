@@ -20,10 +20,12 @@
 
     <link rel="stylesheet" href="https://bootswatch.com/4/lumen/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment.min.js" integrity="sha256-5oApc/wMda1ntIEK4qoWJ4YItnV4fBHMwywunj8gPqc=" crossorigin="anonymous"></script>
+
     <script src="js/main.js"></script>
 </head>
 
@@ -45,65 +47,33 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <span class="navbar-text">My Diary of Software and Web Development</span>
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/my-proficiencies.html">My Proficiencies</a>
+                    <a class="nav-link" href="/my-proficiencies">My Proficiencies</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown">My Projects</a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="">File Hoster</a>
-                        <a class="dropdown-item" href="">News-Bot</a>
-                        <a class="dropdown-item" href="">URL Shortener</a>
+                        <a class="dropdown-item" href="https://api.bappy0x.tk/docs/">API</a>
+                        <a class="dropdown-item" href="https://news.bappy0x.tk">News</a>
+                        <a class="dropdown-item" href="https://notes.bappy0x.tk">Notes</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/contact.html">Contact</a>
+                    <a class="nav-link" href="/contact">Contact</a>
                 </li>
             </ul>
         </div>
     </nav>
 
-    <!--Popup
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cookiePopUp">Launch static backdrop modal</button>
-    <div class="modal fade" id="cookiePopUp" data-backdrop="static" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="cookiePopUpLabel">This website uses cookies!</h5>
-                    <button type="button" class="close" data-dismiss="modal">
-                        <span>&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">This website uses cookies in order to function correctly.</div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Deny</button>
-                    <button type="button" class="btn btn-success">Accept</button>
-                </div>
-            </div>
-        </div>
-    </div>-->
-
-    <!--Notifications
+    <!--Notifications-->
     <div style="position: relative;">
         <div style="position: fixed; bottom: 10px; left: 10px; min-width: 300px; z-index:9999;">
-            {% for i in notifications %}
-            <div class="toast" role="alert" data-autohide="false">
-                <div class="toast-header">
-                    <strong class="mr-auto">{{ i["header"] }}</strong>
-                    {% if i.get("timestamp") %}<small class="text-muted">{{ i["timestamp"] }}</small>{% endif %}
-                    {% if i.get("important") %}<span class="badge badge-warning ml-1">Important</span>{% endif %}
-                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">
-                        <span>&times;</span>
-                    </button>
-                </div>
-                <div class="toast-body">{{ i["body"] }}</div>
-            </div>
-            {% endfor %}
+            <div id="notifications"></div>
         </div>
-    </div>-->
+    </div>
 
     <!--Content-->
     <div class="content">
@@ -147,7 +117,7 @@
                     <p class="footer-brand">
                         <img src="img/logo.png" width="50" class="d-inline-block align-top mr-2">Bappy0X;
                     </p>
-                    <p>Made with ❤️ using HTML, CSS, Bootstrap, jQuery and hosted on GitHub pages.</p>
+                    <p>Made with ❤️ using HTML, CSS, Bootstrap, jQuery and hosted on GitHub Pages.</p>
                     <h4>Copyright © Bappy0X (Joshua Vaughan) 2020</h4>
                 </div>
             </div>
