@@ -1,7 +1,7 @@
 $(document).ready(function() {
     $("[data-toggle=\"tooltip\"]").tooltip();
 
-    $.ajax("http://localhost/notifications")
+    $.ajax("https://api.bappy0x.tk/notifications")
     .done(function(data) {
         if ("valid" in data) {
             data.valid.forEach(notif => {
