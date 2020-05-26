@@ -77,7 +77,39 @@
 
     <!--Content-->
     <div class="content">
-        <h1 class="display-1 text-center">Coming Soon!</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-6 text-right">
+                    <h1 class="display-1">Contact Me</h2>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <form action="https://formspree.io/xqkypbdd" method="POST">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="firstName">First name</label>
+                                <input type="text" name="first-name" class="form-control" id="firstName" placeholder="Foo" required="">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="LastName">Last Name</label>
+                                <input type="text" name="last-name" class="form-control" id="LastName" placeholder="Bar" required="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="emailBox">Your Email Address</label>
+                            <input type="email" name="_replyto" class="form-control" id="emailBox" placeholder="foo@bar.tld">
+                        </div>
+                        <div class="form-group">
+                            <label for="projectNameBox">Your Website (if applicable)</label>
+                            <input type="text" name="project-name" class="form-control" id="projectNameBox" placeholder="https://foobar.tld">
+                        </div>
+                        <div class="form-group">
+                            <label for="messageBox">Message</label>
+                            <textarea name="message" class="form-control" id="messageBox" rows="3" placeholder="The marbles are Greek." required=""></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
     </div>
 
     <!--Footer-->
