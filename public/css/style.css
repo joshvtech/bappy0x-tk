@@ -62,17 +62,21 @@ code {
 .footer-social li:first-child {
     padding-left: 0;
 }
+.fa-heart {
+    color: var(--myred);
+    font-size: 1.2rem;
+}
 
-/*Bootstrap Overrides */
+/*Bootstrap Overrides :not(.carousel-caption>i) */
 .navbar-brand, .footer-brand {
     font-size: 2rem !important;
 }
 
-a {
+a:not(#scrollToTopLink) {
     color: var(--myred) !important;
 }
 
-a:hover:not(.footer-brand) {
+a:hover:not(.footer-brand):not(#scrollToTopLink) {
     color: var(--myred-dark) !important;
 }
 

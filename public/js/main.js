@@ -7,29 +7,29 @@ $(document).ready(function() {
     });
 
     function getShownNotifications() {
-        var rawCurrent = localStorage.getItem("shownNotifications");
-        if (rawCurrent == null) {
+        var raw = localStorage.getItem("shownNotifications");
+        if (raw == null) {
             localStorage.setItem("shownNotifications", "[]");
             return [];
         } else {
-            return JSON.parse(rawCurrent);
+            return JSON.parse(raw);
         };
     };
 
     $.ajax("https://api.bappy0x.tk/notifications/list")
     .done(data => {
-        if ("valid" in data) {
+        if ("notifs" in data) {
             if (typeof(Storage) !== "undefined") {
-                var current = getShownNotifications();
-                data.valid.forEach(notif => {
-                    if (current.includes(notif.id)) return;
+                var shown = getShownNotifications();
+                data.notifs.forEach(notif => {
+                    if (shown.includes(notif.id)) return;
                     $("#notifications").append(
                         `<div class="toast" id="${notif.id}" role="alert" data-autohide="false">
                             <div class="toast-header">
                                 <strong class="mr-auto">${notif.head}</strong>
                                 ${notif.timestamp ? `<small class=\"text-muted\">${moment(notif.timestamp).fromNow()}</small>` : ""}
                                 ${notif.important ? "<span class=\"badge badge-danger ml-1\">Important</span>" : ""}
-                                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">
+                                <button type="button" class="ml-2 mb-1 close" style="font-size: 0.8rem;" data-dismiss="toast">
                                     <i class="fas fa-times"></i>
                                 </button>
                             </div>
@@ -38,9 +38,9 @@ $(document).ready(function() {
                     );
                     $(`.toast#${notif.id}`)
                     .on("hide.bs.toast", _ => {
-                        var current = getShownNotifications();
-                        current.push(notif.id);
-                        localStorage.setItem("shownNotifications", JSON.stringify(current));
+                        var shown = getShownNotifications();
+                        shown.push(notif.id);
+                        localStorage.setItem("shownNotifications", JSON.stringify(shown));
                     })
                     .toast("show");
                 });
