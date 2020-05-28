@@ -4,6 +4,14 @@ html, body {
     font-family: "Rajdhani", sans-serif !important;
 }
 
+:root {
+    --myred: #da3232;
+    --myred-dark: #c11919; /*Darker by 10%*/
+    --myred-darker: #a70000; /*Darker by 20%*/
+    --myred-light: rgba(218, 50, 50, 0.5);
+    --myred-lighter: rgba(218, 50, 50, 0.25);
+}
+
 .carousel-inner {
     max-height: 100vh;
 }
@@ -22,10 +30,6 @@ html, body {
     color: #eeeeee
 }
 
-.navbar-brand, .footer-brand {
-    color: #da3232 !important;
-    font-size: 2rem !important;
-}
 .footer-brand:hover {
     text-decoration: none;
 }
@@ -35,7 +39,6 @@ html, body {
     margin: auto;
 }
 code {
-    color: #da3232 !important;
     background-color: beige;
     border: 5px solid beige;
     border-radius: 5px;
@@ -43,22 +46,6 @@ code {
 .card img {
     align-self: center;
 }
-
-.downloadicon {font-size: 2rem;}
-.downloadicon.detected {font-size: 3rem;}
-.downloadicon:hover {text-decoration: none;}
-
-.downloadicon.windows {color: #0078d7;}
-.downloadicon.windows:hover {color: #0045a4;}
-
-.downloadicon.android {color: #a4c639;}
-.downloadicon.android:hover {color: #719306;}
-
-.downloadicon.linux {color: #f6be0e;}
-.downloadicon.linux:hover {color: #c38b00;}
-
-.downloadicon.github {color: #444;}
-.downloadicon.github:hover {color: #111;}
 
 .footer {
     border-top: 4px solid #f2f2f2;
@@ -75,6 +62,48 @@ code {
 .footer-social li:first-child {
     padding-left: 0;
 }
-.footer-social i {
-    color: #da3232 !important;
+
+/*Bootstrap Overrides */
+.navbar-brand, .footer-brand {
+    font-size: 2rem !important;
+}
+
+a {
+    color: var(--myred) !important;
+}
+
+a:hover:not(.footer-brand) {
+    color: var(--myred-dark) !important;
+}
+
+code {
+    color: var(--myred) !important;
+}
+
+.form-control:focus {
+    border-color: var(--myred) !important;
+    -webkit-box-shadow: 0 0 0 0.2rem var(--myred-lighter) !important;
+            box-shadow: 0 0 0 0.2rem var(--myred-lighter) !important;
+}
+
+.btn-primary {
+    background-color: var(--myred) !important;
+        border-color: var(--myred-dark) !important;
+}
+
+.btn-primary:hover {
+    background-color: var(--myred-dark) !important;
+        border-color: var(--myred-darker) !important;
+}
+
+.btn-primary:focus, .btn-primary.focus {
+    background-color: var(--myred-dark) !important;
+        border-color: var(--myred-darker) !important;
+    -webkit-box-shadow: 0 0 0 0.2rem var(--myred-light) !important;
+            box-shadow: 0 0 0 0.2rem var(--myred-light) !important;
+}
+
+.btn-primary.disabled, .btn-primary:disabled {
+    background-color: var(--myred-lighter) !important;
+        border-color: var(--myred-light) !important;
 }

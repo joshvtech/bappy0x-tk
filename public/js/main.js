@@ -16,7 +16,7 @@ $(document).ready(function() {
         };
     };
 
-    $.ajax("https://api.bappy0x.tk/notifications")
+    $.ajax("https://api.bappy0x.tk/notifications/list")
     .done(data => {
         if ("valid" in data) {
             if (typeof(Storage) !== "undefined") {
@@ -46,7 +46,6 @@ $(document).ready(function() {
                 });
             } else {
                 console.warn("localStorage isn't supported in this browser, notifications won't show.");
-                return;
             };
         } else {
             console.error("Couldn't find valid notifications!")
